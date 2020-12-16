@@ -1,5 +1,19 @@
 .content-dialog {
-  img {
+  width: 300px;
+
+  .input-image {
     width: 100%;
+    margin: 10px 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .dialog-buttons {
+    display: flex;
+    button {
+      margin: 0 10px;
+    }
   }
 }

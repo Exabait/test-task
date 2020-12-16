@@ -3,8 +3,18 @@ button {
 }
 
 h3 {
-  color: #084734;
+  font-family: Roboto;
   font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #084734;
+}
+
+p {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .card {
@@ -14,4 +24,9 @@ h3 {
   justify-content: space-between;
   border-radius: 5%;
   background-color: #F9F9F9;
+
+  .image-placeholder {
+    width: 103px;
+    height: 105px;
+  }
 }

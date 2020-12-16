@@ -11,25 +11,25 @@ export class CalendarComponent implements OnInit {
   private weekCount = 0;
   public weekDates = [];
   public month;
-  // public weekDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.setMonth();
     this.setWeekDates(this.weekCount);
-
-    console.log(this.month);
   }
 
-  public nextMonth(): void {
+  public nextWeek(): void {
     this.weekCount++;
     this.setWeekDates(this.weekCount);
   }
 
-  public previousMonth(): void {
+  public previousWeek(): void {
     this.weekCount--;
     this.setWeekDates(this.weekCount);
+  }
+
+  public isToday(day): string {
+    return moment(day).isSame(Date.now(), 'date') ? 'today' : '';
   }
 
   private setWeekDates(weekCount: number): void {
@@ -44,9 +44,5 @@ export class CalendarComponent implements OnInit {
       this.weekDates.push(day.toDate());
       day = day.clone().add(1, 'd');
     }
-  }
-
-  setMonth(): void {
-    this.month = moment(this.weekDates[0]).toDate();
   }
 }

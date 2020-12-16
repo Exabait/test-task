@@ -1,12 +1,12 @@
 <div class="content-dialog">
   <div>
-  <input class="d__none" type="file" (change)="onContentChange();" #fileInput>
+    <input type="file" (change)="onContentChange();" #fileInput>
   </div>
-  <div *ngIf="fileInput.files.length > 0">
+  <div class="input-image" *ngIf="fileInput.files.length > 0">
     <img [src]="url">
   </div>
-  <div>
-  <button mat-raised-button>Cancel</button>
-  <button mat-raised-button color="primary" [mat-dialog-close]="url">Save</button>
+  <div class="dialog-buttons">
+    <button mat-raised-button mat-dialog-close="">Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="url">Save</button>
   </div>
 </div>

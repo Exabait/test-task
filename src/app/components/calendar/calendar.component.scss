@@ -1,7 +1,7 @@
 .calendar {
   width: 382px;
-  background-color: #F9F9F9;
-  border-radius: 5%;
+  background: #F9F9F9;
+  border-radius: 10px;
   padding: 10px;
 
   .calendar-info {
@@ -9,10 +9,28 @@
     justify-content: space-between;
     margin: 10px 0;
 
+    .month-info {
+      font-family: Roboto;
+      font-size: 14px;
+      line-height: 16px;
+      color: #084734;
+    }
+
     .week-info {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .week-interval {
+        width: 80px;
+
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #263238;
+      }
+
 
       .next {
         margin: 0 10px;
@@ -35,13 +53,35 @@
     display: flex;
     justify-content: space-around;
 
+    .today {
+      background: rgba(8, 71, 52, 0.1);
+      border-radius: 4px;
+    }
+
     .day {
+      width: 40px;
+      padding: 5px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .active {
-        background-color: rgba(38, 50, 56, 0.5);
+
+      .week-day {
+        font-family: Roboto;
+        font-size: 10px;
+        line-height: 12px;
+        text-align: center;
+        color: #263238;
+        opacity: 0.6;
+      }
+
+      .date {
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        color: #263238;
       }
     }
   }

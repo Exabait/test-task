@@ -1,0 +1,12 @@
+<div class="input-wrapper" [ngClass]="{'error': errorMessage, 'disabled': disabled}">
+  <div>
+    <input type="text" class="form-control" [placeholder]="label" [value]="value"
+           (input)="doChange($event.target.value)">
+    <label class="control-label">{{label}}</label>
+  </div>
+  <div *ngIf="clear">
+    <mat-icon *ngIf="value" matSuffix aria-label="Clear" (click)="value=''">close</mat-icon>
+  </div>
+</div>
+<span *ngIf="errorMessage" class="error-message">{{errorMessage}}</span>
+

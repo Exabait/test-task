@@ -1,0 +1,20 @@
+<div class="calendar">
+  <div class="calendar-info">
+    <div>
+      <span>{{weekDates[0] | date : 'MMMM'}}</span>
+    </div>
+    <div class="week-info">
+      <div class="back" (click)="previousMonth()"></div>
+      <div>
+        {{weekDates[0] | date : 'MMM'}} {{weekDates[0] | date : 'd'}} - {{weekDates[weekDates.length - 1] | date : 'd'}}
+      </div>
+      <div class="next" (click)="nextMonth()"></div>
+    </div>
+  </div>
+  <div class="days">
+    <div class="day" *ngFor="let day of weekDates; let i=index">
+      <span>{{day | date : 'E' }}</span>
+      <span>{{day | date : 'd'}}</span>
+    </div>
+  </div>
+</div>

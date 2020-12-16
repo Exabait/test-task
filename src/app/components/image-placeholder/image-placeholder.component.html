@@ -1,0 +1,8 @@
+<div class="image-placeholder" (click)="openDialog()">
+  <div *ngIf="!image">
+    <span>Image Placeholder</span>
+  </div>
+  <div *ngIf="image">
+    <img [src]="image">
+  </div>
+</div>

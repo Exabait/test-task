@@ -1,6 +1,6 @@
 <div class="input-wrapper" [ngClass]="{'error': errorMessage, 'disabled': disabled}">
   <div>
-    <input [ngClass]="{'with-text': inputElement.value}" type="text" class="form-control" [placeholder]="label" [value]="value"
+    <input [ngClass]="{'with-text': inputElement.value}" type="text" class="form-control" [placeholder]="label" value="{{value}}"
            (input)="doChange($event.target.value)" #inputElement>
     <label class="control-label">{{label}}</label>
   </div>

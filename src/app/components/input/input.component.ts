@@ -19,7 +19,7 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   @Input() label = '';
   @Input() clear: boolean;
   @Input() autocomplete: boolean;
-  @Input() disabled: boolean;
+  @Input() disable: boolean;
   @Input() errorMessage: string;
 
   @Input() value: string | number = '';

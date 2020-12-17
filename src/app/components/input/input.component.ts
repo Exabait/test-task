@@ -1,4 +1,4 @@
-import { Component, EventEmitter, forwardRef, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -14,6 +14,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class InputComponent implements OnInit, ControlValueAccessor {
+  @ViewChild('inputElement') inputElement: ElementRef;
+
   @Input() label = '';
   @Input() clear: boolean;
   @Input() autocomplete: boolean;
@@ -30,6 +32,7 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   }
 
   ngOnInit(): void {
+    console.log(this.inputElement);
   }
 
   doChange(value: string | number): void {

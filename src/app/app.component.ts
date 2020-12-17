@@ -12,10 +12,10 @@ export class AppComponent implements OnInit {
 
   public form = this.fb.group({
     defaultInput: [''],
-    focused:  [''],
-    completed: [''],
-    autoclear: [''],
-    errorMessage: ['', [Validators.maxLength(4)]],
+    focused:  ['Text that User is entering|'],
+    completed: ['Text entered, the input field is completed'],
+    autoclear: ['Text entered, the input field is completed'],
+    errorMessage: ['Text entered, the input field is completed', [Validators.maxLength(4)]],
     disabled: [''],
   });
 

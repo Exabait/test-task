@@ -6,3 +6,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+.welcome {
+  display: flex;
+
+  * {
+    margin: 30px 30px 0 0;
+  }
+}

@@ -32,7 +32,6 @@ export class InputComponent implements OnInit, ControlValueAccessor {
   }
 
   ngOnInit(): void {
-    console.log(this.inputElement);
   }
 
   doChange(value: string | number): void {

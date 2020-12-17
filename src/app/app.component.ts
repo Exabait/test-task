@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   public form = this.fb.group({
     defaultInput: [''],
-    focused:  ['Text that User is entering|'],
+    focused:  ['Text that User is entering'],
     completed: ['Text entered, the input field is completed'],
     autoclear: ['Text entered, the input field is completed'],
     errorMessage: ['Text entered, the input field is completed', [Validators.maxLength(4)]],
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public openCalendar(): void {
-    this.isCalendar = true;
+  public calendarToggle(): void {
+    this.isCalendar = !this.isCalendar;
   }
 }

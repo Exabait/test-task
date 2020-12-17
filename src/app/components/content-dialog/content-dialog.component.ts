@@ -9,7 +9,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class ContentDialogComponent implements OnInit {
 
   @ViewChild('fileInput') fileInput: ElementRef;
-  url;
+  public url: string | ArrayBuffer;
 
   constructor(private dialogRef: MatDialogRef<ContentDialogComponent>,
               @Inject(MAT_DIALOG_DATA) data) {
@@ -19,8 +19,6 @@ export class ContentDialogComponent implements OnInit {
   }
 
   onContentChange(): void {
-    console.log(this.fileInput.nativeElement.files[0]);
-
     const file = this.fileInput.nativeElement.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(file);

@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ImagePlaceholderComponent } from './components/image-placeholder/image-placeholder.component';
-import { ButtonComponent } from './components/button/button.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 
 import { InputComponent } from './components/input/input.component';
@@ -21,7 +20,6 @@ import { LocaleService, NgxDaterangepickerMd } from 'ngx-daterangepicker-materia
   declarations: [
     AppComponent,
     ImagePlaceholderComponent,
-    ButtonComponent,
     CalendarComponent,
     InputComponent,
     CardComponent,
